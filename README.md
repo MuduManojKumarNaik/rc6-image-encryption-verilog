@@ -16,7 +16,8 @@ The implementation combines:
 
 - Python → image preprocessing and binary conversion  
 - Verilog → RC6 encryption/decryption logic  
-- Simulation → functional verification  
+- Testbench → functional verification  
+- Simulation → waveform validation  
 
 ---
 
@@ -40,6 +41,19 @@ The encryption pipeline consists of:
 - Modular addition and XOR operations
 - Key-dependent transformations
 - Strong diffusion and confusion properties
+
+---
+
+## 🧪 Verification
+
+The RC6 RTL design was functionally verified using a Verilog testbench.  
+Simulation waveforms confirm correct encryption and decryption behavior for 128-bit data blocks.
+
+### Encryption Waveform
+![Encryption](4_Output/encryption_waveform.png)
+
+### Decryption Waveform
+![Decryption](4_Output/decryption_waveform.png)
 
 ---
 
@@ -71,22 +85,53 @@ The encryption pipeline consists of:
 ## 📂 Repository Structure
 rc6-image-encryption-verilog/
 │
-├── python/
-│   ├── image_to_binary.py
-│   ├── binary_to_image.py
+├── 1_RTL_Code/
+│ ├── rc6_core.v
+│ ├── rc6_dpc.v
+│ ├── rc6_keyex.v
+│ ├── rc6_rol.v
 │
-├── verilog/
-│   ├── rc6_encrypt.v
-│   ├── rc6_decrypt.v
-│   ├── rc6_top.v
+├── 2_Testbench_Code/
+│ ├── rc6_tb.v
 │
-├── images/
-│   ├── input_image.png
-│   ├── encrypted_image.png
-│   ├── decrypted_image.png
+├── 3_Python_Code/
+│ ├── image_to_binary.py
+│ ├── binary_to_image.py
 │
-├── docs/
-│   ├── RC6_Project_Report.pdf
-│   ├── RC6_Published_Paper.pdf
+├── 4_Output/
+│ ├── encrypted_image.png
+│ ├── decrypted_image.png
+│ ├── encryption_waveform.png
+│ ├── decryption_waveform.png
 │
 └── README.md
+
+---
+
+## 🚀 Applications
+
+- Secure image transmission  
+- Embedded cryptographic systems  
+- Confidential multimedia storage  
+- Hardware security research  
+- Military and medical image protection  
+
+---
+
+## 📘 Publication
+
+**RC6-Based Image Encryption: A Secure Approach for Confidential Image Transmission**  
+International Journal for Modern Trends in Science and Technology, 2025
+
+---
+
+## 👨‍💻 Author
+
+**Manoj Kumar Naik Mudu**  
+B.Tech Electronics and Communication Engineering  
+
+---
+
+## 📜 License
+
+Academic and educational use.
