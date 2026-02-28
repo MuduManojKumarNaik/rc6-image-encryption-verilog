@@ -69,3 +69,24 @@ The encryption pipeline consists of:
 ---
 
 ## 📂 Repository Structure
+rc6-image-encryption-verilog/
+│
+├── python/
+│   ├── image_to_binary.py
+│   ├── binary_to_image.py
+│
+├── verilog/
+│   ├── rc6_encrypt.v
+│   ├── rc6_decrypt.v
+│   ├── rc6_top.v
+│
+├── images/
+│   ├── input_image.png
+│   ├── encrypted_image.png
+│   ├── decrypted_image.png
+│
+├── docs/
+│   ├── RC6_Project_Report.pdf
+│   ├── RC6_Published_Paper.pdf
+│
+└── README.md
